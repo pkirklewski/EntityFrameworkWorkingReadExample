@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MobileFormsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Schedule6BuildingData">
+    <Key>
+      <PropertyRef Name="BuildingId" />
+    </Key>
+    <Property Name="BuildingId" Type="int" Nullable="false" />
+    <Property Name="SiteId" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TTSiteRef" Type="nvarchar" MaxLength="255" />
+    <Property Name="Region" Type="int" />
+    <Property Name="PropertyNo" Type="int" />
+    <Property Name="BU" Type="nvarchar" MaxLength="255" />
+    <Property Name="GOR" Type="int" />
+    <Property Name="BuildingName" Type="nvarchar" MaxLength="255" />
+    <Property Name="BuildingAddress1" Type="nvarchar" MaxLength="255" />
+    <Property Name="BuildingAddress2" Type="nvarchar" MaxLength="255" />
+    <Property Name="City" Type="nvarchar" MaxLength="255" />
+    <Property Name="County" Type="nvarchar" MaxLength="255" />
+    <Property Name="Postcode" Type="nvarchar" MaxLength="255" />
+    <Property Name="ContractId" Type="nvarchar" MaxLength="255" />
+    <Property Name="MajorOrMinor" Type="nvarchar" MaxLength="20" />
+    <Property Name="ProposedVacantDate" Type="datetime" />
+    <Property Name="BuildingMaintenance" Type="nvarchar" MaxLength="20" />
+    <Property Name="BuildingManagement" Type="nvarchar" MaxLength="20" />
+    <Property Name="EnergyAndUtilitiesManagement" Type="nvarchar" MaxLength="20" />
+    <Property Name="LandscapeMaintenance" Type="nvarchar" MaxLength="20" />
+    <Property Name="ExternalCleaning" Type="nvarchar" MaxLength="20" />
+    <Property Name="WasteManagement" Type="nvarchar" MaxLength="20" />
+    <Property Name="CateringFacilitiesAndEquipment" Type="nvarchar" MaxLength="20" />
+    <Property Name="SecurityService" Type="nvarchar" MaxLength="20" />
+    <Property Name="InternalCleaning" Type="nvarchar" MaxLength="20" />
+    <Property Name="Porterage" Type="nvarchar" MaxLength="20" />
+    <Property Name="SecurityEquipment" Type="nvarchar" MaxLength="20" />
+    <Property Name="CustomerStewardingService" Type="nvarchar" MaxLength="20" />
+    <Property Name="CateringService" Type="nvarchar" MaxLength="20" />
+    <Property Name="EquipmentMaintenance" Type="nvarchar" MaxLength="20" />
+    <Property Name="CommercialRef" Type="nvarchar" MaxLength="500" />
+    <Property Name="CommercialRefExtra" Type="nvarchar" MaxLength="500" />
+    <Property Name="CommercialRefExtra2" Type="nvarchar" MaxLength="500" />
+    <Property Name="VOLogUpdate" Type="datetime" />
+    <Property Name="AegisSite" Type="nvarchar" MaxLength="255" />
+    <Property Name="AEGISLiveDate" Type="datetime" />
+    <Property Name="ServicesConfirmed" Type="bit" Nullable="false" />
+    <Property Name="SCHED6SRVSREQD" Type="bit" Nullable="false" />
+    <Property Name="OriginalBaselineOperatingBand" Type="nvarchar" MaxLength="255" />
+    <Property Name="CurrentOperatingBand" Type="nvarchar" MaxLength="255" />
+    <Property Name="NormalWorkingHours" Type="nvarchar" MaxLength="255" />
+    <Property Name="PublicOpeningHours" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="MobileFormsModelStoreContainer">
+    <EntitySet Name="Schedule6BuildingData" EntityType="Self.Schedule6BuildingData" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

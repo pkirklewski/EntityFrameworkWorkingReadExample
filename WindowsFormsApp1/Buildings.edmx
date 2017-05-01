@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MobileFormsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Schedule6BuildingData">
+          <Key>
+            <PropertyRef Name="BuildingId" />
+          </Key>
+          <Property Name="BuildingId" Type="int" Nullable="false" />
+          <Property Name="SiteId" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TTSiteRef" Type="nvarchar" MaxLength="255" />
+          <Property Name="Region" Type="int" />
+          <Property Name="PropertyNo" Type="int" />
+          <Property Name="BU" Type="nvarchar" MaxLength="255" />
+          <Property Name="GOR" Type="int" />
+          <Property Name="BuildingName" Type="nvarchar" MaxLength="255" />
+          <Property Name="BuildingAddress1" Type="nvarchar" MaxLength="255" />
+          <Property Name="BuildingAddress2" Type="nvarchar" MaxLength="255" />
+          <Property Name="City" Type="nvarchar" MaxLength="255" />
+          <Property Name="County" Type="nvarchar" MaxLength="255" />
+          <Property Name="Postcode" Type="nvarchar" MaxLength="255" />
+          <Property Name="ContractId" Type="nvarchar" MaxLength="255" />
+          <Property Name="MajorOrMinor" Type="nvarchar" MaxLength="20" />
+          <Property Name="ProposedVacantDate" Type="datetime" />
+          <Property Name="BuildingMaintenance" Type="nvarchar" MaxLength="20" />
+          <Property Name="BuildingManagement" Type="nvarchar" MaxLength="20" />
+          <Property Name="EnergyAndUtilitiesManagement" Type="nvarchar" MaxLength="20" />
+          <Property Name="LandscapeMaintenance" Type="nvarchar" MaxLength="20" />
+          <Property Name="ExternalCleaning" Type="nvarchar" MaxLength="20" />
+          <Property Name="WasteManagement" Type="nvarchar" MaxLength="20" />
+          <Property Name="CateringFacilitiesAndEquipment" Type="nvarchar" MaxLength="20" />
+          <Property Name="SecurityService" Type="nvarchar" MaxLength="20" />
+          <Property Name="InternalCleaning" Type="nvarchar" MaxLength="20" />
+          <Property Name="Porterage" Type="nvarchar" MaxLength="20" />
+          <Property Name="SecurityEquipment" Type="nvarchar" MaxLength="20" />
+          <Property Name="CustomerStewardingService" Type="nvarchar" MaxLength="20" />
+          <Property Name="CateringService" Type="nvarchar" MaxLength="20" />
+          <Property Name="EquipmentMaintenance" Type="nvarchar" MaxLength="20" />
+          <Property Name="CommercialRef" Type="nvarchar" MaxLength="500" />
+          <Property Name="CommercialRefExtra" Type="nvarchar" MaxLength="500" />
+          <Property Name="CommercialRefExtra2" Type="nvarchar" MaxLength="500" />
+          <Property Name="VOLogUpdate" Type="datetime" />
+          <Property Name="AegisSite" Type="nvarchar" MaxLength="255" />
+          <Property Name="AEGISLiveDate" Type="datetime" />
+          <Property Name="ServicesConfirmed" Type="bit" Nullable="false" />
+          <Property Name="SCHED6SRVSREQD" Type="bit" Nullable="false" />
+          <Property Name="OriginalBaselineOperatingBand" Type="nvarchar" MaxLength="255" />
+          <Property Name="CurrentOperatingBand" Type="nvarchar" MaxLength="255" />
+          <Property Name="NormalWorkingHours" Type="nvarchar" MaxLength="255" />
+          <Property Name="PublicOpeningHours" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="MobileFormsModelStoreContainer">
+          <EntitySet Name="Schedule6BuildingData" EntityType="Self.Schedule6BuildingData" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MobileFormsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Schedule6BuildingData">
+          <Key>
+            <PropertyRef Name="BuildingId" />
+          </Key>
+          <Property Name="BuildingId" Type="Int32" Nullable="false" />
+          <Property Name="SiteId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TTSiteRef" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Region" Type="Int32" />
+          <Property Name="PropertyNo" Type="Int32" />
+          <Property Name="BU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GOR" Type="Int32" />
+          <Property Name="BuildingName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BuildingAddress1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="BuildingAddress2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="County" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Postcode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ContractId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MajorOrMinor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ProposedVacantDate" Type="DateTime" Precision="3" />
+          <Property Name="BuildingMaintenance" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="BuildingManagement" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EnergyAndUtilitiesManagement" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LandscapeMaintenance" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ExternalCleaning" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="WasteManagement" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CateringFacilitiesAndEquipment" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityService" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="InternalCleaning" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Porterage" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityEquipment" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerStewardingService" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CateringService" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="EquipmentMaintenance" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CommercialRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CommercialRefExtra" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CommercialRefExtra2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="VOLogUpdate" Type="DateTime" Precision="3" />
+          <Property Name="AegisSite" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AEGISLiveDate" Type="DateTime" Precision="3" />
+          <Property Name="ServicesConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="SCHED6SRVSREQD" Type="Boolean" Nullable="false" />
+          <Property Name="OriginalBaselineOperatingBand" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CurrentOperatingBand" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NormalWorkingHours" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PublicOpeningHours" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="MobileFormsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Schedule6BuildingData" EntityType="Self.Schedule6BuildingData" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MobileFormsModelStoreContainer" CdmEntityContainer="MobileFormsEntities">
+          <EntitySetMapping Name="Schedule6BuildingData">
+            <EntityTypeMapping TypeName="MobileFormsModel.Schedule6BuildingData">
+              <MappingFragment StoreEntitySet="Schedule6BuildingData">
+                <ScalarProperty Name="BuildingId" ColumnName="BuildingId" />
+                <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+                <ScalarProperty Name="TTSiteRef" ColumnName="TTSiteRef" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="PropertyNo" ColumnName="PropertyNo" />
+                <ScalarProperty Name="BU" ColumnName="BU" />
+                <ScalarProperty Name="GOR" ColumnName="GOR" />
+                <ScalarProperty Name="BuildingName" ColumnName="BuildingName" />
+                <ScalarProperty Name="BuildingAddress1" ColumnName="BuildingAddress1" />
+                <ScalarProperty Name="BuildingAddress2" ColumnName="BuildingAddress2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+                <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+                <ScalarProperty Name="MajorOrMinor" ColumnName="MajorOrMinor" />
+                <ScalarProperty Name="ProposedVacantDate" ColumnName="ProposedVacantDate" />
+                <ScalarProperty Name="BuildingMaintenance" ColumnName="BuildingMaintenance" />
+                <ScalarProperty Name="BuildingManagement" ColumnName="BuildingManagement" />
+                <ScalarProperty Name="EnergyAndUtilitiesManagement" ColumnName="EnergyAndUtilitiesManagement" />
+                <ScalarProperty Name="LandscapeMaintenance" ColumnName="LandscapeMaintenance" />
+                <ScalarProperty Name="ExternalCleaning" ColumnName="ExternalCleaning" />
+                <ScalarProperty Name="WasteManagement" ColumnName="WasteManagement" />
+                <ScalarProperty Name="CateringFacilitiesAndEquipment" ColumnName="CateringFacilitiesAndEquipment" />
+                <ScalarProperty Name="SecurityService" ColumnName="SecurityService" />
+                <ScalarProperty Name="InternalCleaning" ColumnName="InternalCleaning" />
+                <ScalarProperty Name="Porterage" ColumnName="Porterage" />
+                <ScalarProperty Name="SecurityEquipment" ColumnName="SecurityEquipment" />
+                <ScalarProperty Name="CustomerStewardingService" ColumnName="CustomerStewardingService" />
+                <ScalarProperty Name="CateringService" ColumnName="CateringService" />
+                <ScalarProperty Name="EquipmentMaintenance" ColumnName="EquipmentMaintenance" />
+                <ScalarProperty Name="CommercialRef" ColumnName="CommercialRef" />
+                <ScalarProperty Name="CommercialRefExtra" ColumnName="CommercialRefExtra" />
+                <ScalarProperty Name="CommercialRefExtra2" ColumnName="CommercialRefExtra2" />
+                <ScalarProperty Name="VOLogUpdate" ColumnName="VOLogUpdate" />
+                <ScalarProperty Name="AegisSite" ColumnName="AegisSite" />
+                <ScalarProperty Name="AEGISLiveDate" ColumnName="AEGISLiveDate" />
+                <ScalarProperty Name="ServicesConfirmed" ColumnName="ServicesConfirmed" />
+                <ScalarProperty Name="SCHED6SRVSREQD" ColumnName="SCHED6SRVSREQD" />
+                <ScalarProperty Name="OriginalBaselineOperatingBand" ColumnName="OriginalBaselineOperatingBand" />
+                <ScalarProperty Name="CurrentOperatingBand" ColumnName="CurrentOperatingBand" />
+                <ScalarProperty Name="NormalWorkingHours" ColumnName="NormalWorkingHours" />
+                <ScalarProperty Name="PublicOpeningHours" ColumnName="PublicOpeningHours" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MobileFormsModelStoreContainer" CdmEntityContainer="MobileFormsEntities">
+    <EntitySetMapping Name="Schedule6BuildingData">
+      <EntityTypeMapping TypeName="MobileFormsModel.Schedule6BuildingData">
+        <MappingFragment StoreEntitySet="Schedule6BuildingData">
+          <ScalarProperty Name="BuildingId" ColumnName="BuildingId" />
+          <ScalarProperty Name="SiteId" ColumnName="SiteId" />
+          <ScalarProperty Name="TTSiteRef" ColumnName="TTSiteRef" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="PropertyNo" ColumnName="PropertyNo" />
+          <ScalarProperty Name="BU" ColumnName="BU" />
+          <ScalarProperty Name="GOR" ColumnName="GOR" />
+          <ScalarProperty Name="BuildingName" ColumnName="BuildingName" />
+          <ScalarProperty Name="BuildingAddress1" ColumnName="BuildingAddress1" />
+          <ScalarProperty Name="BuildingAddress2" ColumnName="BuildingAddress2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="ContractId" ColumnName="ContractId" />
+          <ScalarProperty Name="MajorOrMinor" ColumnName="MajorOrMinor" />
+          <ScalarProperty Name="ProposedVacantDate" ColumnName="ProposedVacantDate" />
+          <ScalarProperty Name="BuildingMaintenance" ColumnName="BuildingMaintenance" />
+          <ScalarProperty Name="BuildingManagement" ColumnName="BuildingManagement" />
+          <ScalarProperty Name="EnergyAndUtilitiesManagement" ColumnName="EnergyAndUtilitiesManagement" />
+          <ScalarProperty Name="LandscapeMaintenance" ColumnName="LandscapeMaintenance" />
+          <ScalarProperty Name="ExternalCleaning" ColumnName="ExternalCleaning" />
+          <ScalarProperty Name="WasteManagement" ColumnName="WasteManagement" />
+          <ScalarProperty Name="CateringFacilitiesAndEquipment" ColumnName="CateringFacilitiesAndEquipment" />
+          <ScalarProperty Name="SecurityService" ColumnName="SecurityService" />
+          <ScalarProperty Name="InternalCleaning" ColumnName="InternalCleaning" />
+          <ScalarProperty Name="Porterage" ColumnName="Porterage" />
+          <ScalarProperty Name="SecurityEquipment" ColumnName="SecurityEquipment" />
+          <ScalarProperty Name="CustomerStewardingService" ColumnName="CustomerStewardingService" />
+          <ScalarProperty Name="CateringService" ColumnName="CateringService" />
+          <ScalarProperty Name="EquipmentMaintenance" ColumnName="EquipmentMaintenance" />
+          <ScalarProperty Name="CommercialRef" ColumnName="CommercialRef" />
+          <ScalarProperty Name="CommercialRefExtra" ColumnName="CommercialRefExtra" />
+          <ScalarProperty Name="CommercialRefExtra2" ColumnName="CommercialRefExtra2" />
+          <ScalarProperty Name="VOLogUpdate" ColumnName="VOLogUpdate" />
+          <ScalarProperty Name="AegisSite" ColumnName="AegisSite" />
+          <ScalarProperty Name="AEGISLiveDate" ColumnName="AEGISLiveDate" />
+          <ScalarProperty Name="ServicesConfirmed" ColumnName="ServicesConfirmed" />
+          <ScalarProperty Name="SCHED6SRVSREQD" ColumnName="SCHED6SRVSREQD" />
+          <ScalarProperty Name="OriginalBaselineOperatingBand" ColumnName="OriginalBaselineOperatingBand" />
+          <ScalarProperty Name="CurrentOperatingBand" ColumnName="CurrentOperatingBand" />
+          <ScalarProperty Name="NormalWorkingHours" ColumnName="NormalWorkingHours" />
+          <ScalarProperty Name="PublicOpeningHours" ColumnName="PublicOpeningHours" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
