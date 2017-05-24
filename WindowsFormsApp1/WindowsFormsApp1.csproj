@@ -75,6 +75,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PostCode.cs">
+      <DependentUpon>PostCodes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostCodes.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PostCodes.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostCodes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PostCodes.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PostCodes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PostCodes.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schedule6BuildingData.cs">
@@ -100,6 +118,13 @@
       <DependentUpon>Buildings.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <EntityDeploy Include="PostCodes.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PostCodes.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PostCodes.edmx.diagram">
+      <DependentUpon>PostCodes.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,6 +148,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Buildings.edmx</DependentUpon>
       <LastGenOutput>Buildings.cs</LastGenOutput>
+    </Content>
+    <Content Include="PostCodes.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PostCodes.edmx</DependentUpon>
+      <LastGenOutput>PostCodes.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PostCodes.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PostCodes.edmx</DependentUpon>
+      <LastGenOutput>PostCodes.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
