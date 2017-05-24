@@ -19,7 +19,8 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            checkBox1.Checked = false;
+            button2.Enabled = false;
            MobileFormsEntities db = new MobileFormsEntities();
            UKPostCodesEntities ukp = new UKPostCodesEntities();
 
@@ -53,11 +54,19 @@ namespace WindowsFormsApp1
 
             var postCodeQuery = from p in ukp.PostCodes where p.postcode1 == textBox6.Text select p;
             List < PostCode > postcode = postCodeQuery.ToList();
+            dataGridView2.DataSource = postcode;
 
             textBox7.DataBindings.Add("Text", postcode, "latitude");
             textBox8.DataBindings.Add("Text", postcode, "longitude");
 
             string xyz = "";
+
+
+            if  (textBox7.Text != "" && textBox7.Text != "")
+            {
+                checkBox1.Visible = true;
+                button2.Visible = true;
+            }
 
         }
 
@@ -77,6 +86,25 @@ namespace WindowsFormsApp1
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            button2.Enabled = false;
+            button2.Visible = false;
+            checkBox1.Visible = false;
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked = true) {
+                button2.Enabled = true;
+            }
+        }
+
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }
