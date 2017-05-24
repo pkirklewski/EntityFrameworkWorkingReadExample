@@ -143,7 +143,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 373);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 311);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1038, 66);
             this.dataGridView1.TabIndex = 10;
@@ -151,15 +151,14 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 161);
+            this.label6.Location = new System.Drawing.Point(16, 160);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 13);
+            this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Address1";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(92, 154);
+            this.textBox5.Location = new System.Drawing.Point(289, 108);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(193, 20);
             this.textBox5.TabIndex = 11;
@@ -167,7 +166,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 193);
+            this.label7.Location = new System.Drawing.Point(16, 160);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 14;
@@ -176,7 +175,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(92, 186);
+            this.textBox6.Location = new System.Drawing.Point(92, 153);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(193, 20);
             this.textBox6.TabIndex = 13;
@@ -185,7 +184,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 219);
+            this.label8.Location = new System.Drawing.Point(16, 186);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 13);
             this.label8.TabIndex = 16;
@@ -194,7 +193,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(92, 212);
+            this.textBox7.Location = new System.Drawing.Point(92, 179);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(193, 20);
             this.textBox7.TabIndex = 15;
@@ -202,7 +201,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 245);
+            this.label9.Location = new System.Drawing.Point(16, 212);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 13);
             this.label9.TabIndex = 18;
@@ -210,7 +209,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(92, 238);
+            this.textBox8.Location = new System.Drawing.Point(92, 205);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(193, 20);
             this.textBox8.TabIndex = 17;
@@ -218,7 +217,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(92, 269);
+            this.checkBox1.Location = new System.Drawing.Point(92, 236);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(88, 17);
             this.checkBox1.TabIndex = 19;
@@ -228,17 +227,18 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(92, 288);
+            this.button2.Location = new System.Drawing.Point(92, 255);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(193, 23);
             this.button2.TabIndex = 20;
             this.button2.Text = "Insert";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 459);
+            this.dataGridView2.Location = new System.Drawing.Point(12, 397);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(1038, 66);
             this.dataGridView2.TabIndex = 21;
@@ -246,7 +246,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 357);
+            this.label10.Location = new System.Drawing.Point(9, 295);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(256, 13);
             this.label10.TabIndex = 22;
@@ -256,7 +256,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(3, 442);
+            this.label11.Location = new System.Drawing.Point(9, 380);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(200, 13);
             this.label11.TabIndex = 23;

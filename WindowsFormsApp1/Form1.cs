@@ -79,6 +79,9 @@ namespace WindowsFormsApp1
             textBox6.DataBindings.Add("Text", myBuildings, "Postcode");
             //textBox2.Text = myBuildings.First();
 
+            textBox3.Text = textBox3.Text + " " + textBox5.Text;
+
+
             var postCodeQuery = from p in ukp.PostCodes where p.postcode1 == textBox6.Text select p;
             List < PostCode > postcode = postCodeQuery.ToList();
             dataGridView2.DataSource = postcode;
@@ -122,6 +125,7 @@ namespace WindowsFormsApp1
             button2.Enabled = false;
             button2.Visible = false;
             checkBox1.Visible = false;
+            textBox5.Visible = false;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -138,6 +142,46 @@ namespace WindowsFormsApp1
 
         private void label10_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PropertyPortalEntities ppe = new PropertyPortalEntities();
+            var newBuilding = new Building();
+            newBuilding.Reference = Convert.ToInt32(textBox1.Text);
+            newBuilding.Name = textBox2.Text;
+            newBuilding.Address = textBox3.Text  + " " + textBox5.Text;
+            newBuilding.Town = textBox4.Text;
+            newBuilding.PostCode = textBox6.Text;
+            newBuilding.Latitude = Convert.ToDouble(textBox7.Text);
+            newBuilding.Longitude =  Convert.ToDouble(textBox8.Text);
+            newBuilding.Contract = "DWP";
+
+            string displayText = "Building " + textBox1.Text + " saved.";
+
+            using (var ppb = new PropertyPortalEntities())
+            {
+                try
+                {
+                    ppb.Buildings.Add(newBuilding);
+                   // ppb.SaveChanges();
+
+                    if (ppb.SaveChanges() > 0) {
+                        MessageBox.Show(displayText, "BUILDING SAVED", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+
+                }
+                catch (System.Data.Entity.Infrastructure.DbUpdateException ex) {
+                    MessageBox.Show(ex.InnerException.ToString(), "ERROR !",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+                    
+                
+
+
+            }
+
 
         }
     }
