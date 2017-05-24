@@ -19,7 +19,40 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (checkBox1.Checked = true) {
             checkBox1.Checked = false;
+                button2.Enabled = false;
+                checkBox1.Refresh();
+                button2.Refresh();
+
+            }
+
+
+
+            dataGridView1.Refresh();
+            dataGridView2.Refresh();
+
+
+            textBox2.DataBindings.Clear();
+            textBox3.DataBindings.Clear();
+            textBox4.DataBindings.Clear();
+            textBox5.DataBindings.Clear();
+            textBox6.DataBindings.Clear();
+            textBox7.DataBindings.Clear();
+            textBox8.DataBindings.Clear();
+
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+            textBox6.Text = "";
+            textBox7.Text = "";
+            textBox8.Text = "";
+
+
+
+            button2.Refresh();
+
             button2.Enabled = false;
            MobileFormsEntities db = new MobileFormsEntities();
            UKPostCodesEntities ukp = new UKPostCodesEntities();
@@ -37,13 +70,7 @@ namespace WindowsFormsApp1
 
             // Clear databindings
 
-            textBox2.DataBindings.Clear();
-            textBox3.DataBindings.Clear();
-            textBox4.DataBindings.Clear();
-            textBox5.DataBindings.Clear();
-            textBox6.DataBindings.Clear();
-            textBox7.DataBindings.Clear();
-            textBox8.DataBindings.Clear();
+
 
             textBox2.DataBindings.Add("Text", myBuildings, "BuildingName");
             textBox3.DataBindings.Add("Text", myBuildings, "BuildingAddress1");
@@ -99,8 +126,13 @@ namespace WindowsFormsApp1
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked = true) {
+            if (checkBox1.Checked == true)
+            {
                 button2.Enabled = true;
+            }
+            else
+            {
+                button2.Enabled = false;
             }
         }
 
