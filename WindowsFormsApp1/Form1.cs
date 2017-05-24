@@ -23,11 +23,16 @@ namespace WindowsFormsApp1
            MobileFormsEntities db = new MobileFormsEntities();
            UKPostCodesEntities ukp = new UKPostCodesEntities();
 
+            // Getting building INFO from MobileForms Schedule6 table
             var myQuery = from b in db.Schedule6BuildingData where b.BuildingId.ToString() == textBox1.Text select b;
-
             List < Schedule6BuildingData > myBuildings = myQuery.ToList();
-         
             dataGridView1.DataSource = myBuildings;
+            // END OF:  // Getting building INFO from MobileForms Schedule6 table
+            
+            // Getting latitude and longitude from UKPostCodes
+
+            // END OF: Getting latitude and longitude from UKPostCodes
+
 
             // Clear databindings
 
@@ -36,6 +41,8 @@ namespace WindowsFormsApp1
             textBox4.DataBindings.Clear();
             textBox5.DataBindings.Clear();
             textBox6.DataBindings.Clear();
+            textBox7.DataBindings.Clear();
+            textBox8.DataBindings.Clear();
 
             textBox2.DataBindings.Add("Text", myBuildings, "BuildingName");
             textBox3.DataBindings.Add("Text", myBuildings, "BuildingAddress1");
@@ -43,8 +50,12 @@ namespace WindowsFormsApp1
             textBox5.DataBindings.Add("Text", myBuildings, "BuildingAddress2");
             textBox6.DataBindings.Add("Text", myBuildings, "Postcode");
             //textBox2.Text = myBuildings.First();
+
             var postCodeQuery = from p in ukp.PostCodes where p.postcode1 == textBox6.Text select p;
             List < PostCode > postcode = postCodeQuery.ToList();
+
+            textBox7.DataBindings.Add("Text", postcode, "latitude");
+            textBox8.DataBindings.Add("Text", postcode, "longitude");
 
             string xyz = "";
 
