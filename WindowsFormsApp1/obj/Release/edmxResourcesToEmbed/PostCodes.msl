@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UKPostCodesModelStoreContainer" CdmEntityContainer="UKPostCodesEntities">
+    <EntitySetMapping Name="PostCodes">
+      <EntityTypeMapping TypeName="UKPostCodesModel.PostCode">
+        <MappingFragment StoreEntitySet="PostCodes">
+          <ScalarProperty Name="pID" ColumnName="pID" />
+          <ScalarProperty Name="postcode1" ColumnName="postcode" />
+          <ScalarProperty Name="latitude" ColumnName="latitude" />
+          <ScalarProperty Name="longitude" ColumnName="longitude" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked = true) {
+            if (checkBox1.Checked == true) {
             checkBox1.Checked = false;
                 button2.Enabled = false;
                 checkBox1.Refresh();
@@ -57,11 +57,30 @@ namespace WindowsFormsApp1
            MobileFormsEntities db = new MobileFormsEntities();
            UKPostCodesEntities ukp = new UKPostCodesEntities();
 
+
+
+            try
+            {
             // Getting building INFO from MobileForms Schedule6 table
             var myQuery = from b in db.Schedule6BuildingData where b.BuildingId.ToString() == textBox1.Text select b;
             List < Schedule6BuildingData > myBuildings = myQuery.ToList();
             dataGridView1.DataSource = myBuildings;
-            // END OF:  // Getting building INFO from MobileForms Schedule6 table
+                // END OF:  // Getting building INFO from MobileForms Schedule6 table
+
+                textBox2.DataBindings.Add("Text", myBuildings, "BuildingName");
+                textBox3.DataBindings.Add("Text", myBuildings, "BuildingAddress1");
+                textBox4.DataBindings.Add("Text", myBuildings, "City");
+                textBox5.DataBindings.Add("Text", myBuildings, "BuildingAddress2");
+                textBox6.DataBindings.Add("Text", myBuildings, "Postcode");
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+
             
             // Getting latitude and longitude from UKPostCodes
 
@@ -72,11 +91,7 @@ namespace WindowsFormsApp1
 
 
 
-            textBox2.DataBindings.Add("Text", myBuildings, "BuildingName");
-            textBox3.DataBindings.Add("Text", myBuildings, "BuildingAddress1");
-            textBox4.DataBindings.Add("Text", myBuildings, "City");
-            textBox5.DataBindings.Add("Text", myBuildings, "BuildingAddress2");
-            textBox6.DataBindings.Add("Text", myBuildings, "Postcode");
+
             //textBox2.Text = myBuildings.First();
 
             textBox3.Text = textBox3.Text + " " + textBox5.Text;
@@ -89,7 +104,7 @@ namespace WindowsFormsApp1
             textBox7.DataBindings.Add("Text", postcode, "latitude");
             textBox8.DataBindings.Add("Text", postcode, "longitude");
 
-            string xyz = "";
+      
 
 
             if  (textBox7.Text != "" && textBox7.Text != "")

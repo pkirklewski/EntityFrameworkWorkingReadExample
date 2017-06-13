@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="2cf7b025a6b642abb78d3ac82ef0e3f4" Name="Diagram1">
-        <EntityTypeShape EntityType="UKPostCodesModel.PostCode" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UKPostCodesModel.PostCode" Width="1.75" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

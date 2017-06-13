@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MobileFormsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Schedule6BuildingData">
+    <Key>
+      <PropertyRef Name="BuildingId" />
+    </Key>
+    <Property Name="BuildingId" Type="Int32" Nullable="false" />
+    <Property Name="SiteId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TTSiteRef" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Region" Type="Int32" />
+    <Property Name="PropertyNo" Type="Int32" />
+    <Property Name="BU" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GOR" Type="Int32" />
+    <Property Name="BuildingName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BuildingAddress1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BuildingAddress2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="County" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Postcode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ContractId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MajorOrMinor" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ProposedVacantDate" Type="DateTime" Precision="3" />
+    <Property Name="BuildingMaintenance" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="BuildingManagement" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EnergyAndUtilitiesManagement" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LandscapeMaintenance" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ExternalCleaning" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="WasteManagement" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CateringFacilitiesAndEquipment" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityService" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="InternalCleaning" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Porterage" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityEquipment" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CustomerStewardingService" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CateringService" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EquipmentMaintenance" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CommercialRef" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CommercialRefExtra" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CommercialRefExtra2" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="VOLogUpdate" Type="DateTime" Precision="3" />
+    <Property Name="AegisSite" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AEGISLiveDate" Type="DateTime" Precision="3" />
+    <Property Name="ServicesConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="SCHED6SRVSREQD" Type="Boolean" Nullable="false" />
+    <Property Name="OriginalBaselineOperatingBand" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentOperatingBand" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NormalWorkingHours" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PublicOpeningHours" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="MobileFormsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Schedule6BuildingData" EntityType="Self.Schedule6BuildingData" />
+  </EntityContainer>
+</Schema>
